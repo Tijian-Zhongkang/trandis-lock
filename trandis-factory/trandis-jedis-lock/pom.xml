@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>trandis-factory</artifactId>
+        <groupId>com.xm.sanvanfo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>trandis-jedis-lock</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>4.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.xm.sanvanfo</groupId>
+            <artifactId>trandis-redis-coordinator</artifactId>
+            <version>${rversion}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.xm.sanvanfo</groupId>
+            <artifactId>trandis-common-sys</artifactId>
+            <version>${rversion}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.xm.sanvanfo</groupId>
+            <artifactId>trandis-redis-common</artifactId>
+            <version>${rversion}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.xm.sanvanfo</groupId>
+            <artifactId>trandis-agent-api</artifactId>
+            <version>${rversion}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
